@@ -1,0 +1,146 @@
+.header {
+  position: relative;
+  
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.05) 100%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    bottom: -30px;
+  }
+
+  &__topper {
+    border-bottom: 1px solid $gray;
+    padding: 20px 0;
+  }
+
+  &__topper-wrapper,
+  &__topper-links {
+    @include flex(center, flex-start);
+  }
+
+  &__logo {
+    margin-right: 44px;
+  }
+
+  &__topper-item {
+    margin-right: 20px;
+  }
+
+  &__topper-link {
+    @include flex(center, flex-start);
+
+    font-size: 14px;
+    line-height: 17px;
+
+    span {
+      padding: 3px 0;
+      border-bottom: 1px solid $gray;
+    }
+
+    svg, img {
+      margin-right: 9px;
+    }
+  }
+
+  &__phone {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__phone-item {
+    font-size: 14px;
+    line-height: 17px;
+    display: inline-block;
+
+    svg, img {
+      margin-right: 5px;
+    }
+  }
+
+  &__phone-item:first-of-type {
+    margin-bottom: 5px;
+  }
+
+  &__phone-link {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  &__lower {
+    padding: 10px 0;
+  }
+
+  &__mob {
+    display: none;
+  }
+
+  &__lower-links {
+    @include flex(center, space-between);
+  }
+
+  &__lower-link {
+    @include flex(center, center);
+
+    padding: 8px 56px;
+    font-size: 16px;
+    line-height: 20px;
+    border-right: 1px solid $gray;
+
+    svg, img {
+      margin-right: 10px;
+    }
+
+    span {
+      display: inline-block;
+      padding-right: 27px;
+      position: relative;
+
+      &::after,
+      &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        width: 8px;
+        height: 8px;
+        background: rgb(255,204,0);
+        background: linear-gradient(90deg, rgba(255,204,0,1) 100%, rgba(255,163,0,1) 100%);
+        top: 35%;
+      }
+
+      &::before {
+        width: 6px;
+        height: 6px;
+        background-color: $white;
+        z-index: 1;
+        right: 1px;
+        top: 32%;
+      }
+    }
+  }
+
+  &__lower-item:first-of-type {
+    span {
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__lower-item:first-of-type &__lower-link {
+    padding-left: 0;
+  }
+}

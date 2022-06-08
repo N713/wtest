@@ -1,0 +1,12 @@
+.list {
+  @include reset();
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+}

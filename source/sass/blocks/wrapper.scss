@@ -2,7 +2,8 @@
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  max-width: $maxWidth;
+  max-width: $wrapperSize;
   box-sizing: border-box;
-  padding: 0 $gap;
+  padding: 0 20px;
+  margin: 0 auto;
 }

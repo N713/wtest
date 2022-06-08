@@ -1,0 +1,33 @@
+.number {
+  @include flex(center, center);
+
+  background-color: $white;
+  max-width: 465px;
+  min-height: 100px;
+  border-radius: 100px;
+  padding: 20px 40px;
+
+  &__gradient {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    background-color: #ffff00;
+    background: linear-gradient(270deg, #FFCC00 0%, #FFA300 100%), linear-gradient(0deg, #FFA300, #FFA300), linear-gradient(0deg, #4BB1BC, #4BB1BC), linear-gradient(0deg, #1767F9, #1767F9), #4633B9;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: $proxima;
+    margin-right: 10px;
+  }
+
+  &__smile {
+    margin-right: 10px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 150px;
+    text-align: left;
+  }
+}

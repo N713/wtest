@@ -9,6 +9,7 @@
   <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ProximaNova-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
   <script>
     document.createElement( "picture" );
@@ -21,38 +22,44 @@
     <header class="header">
       <div class="header__topper">
         <div class="wrapper">
-          <picture class="header__logo">
-            <source type="image/webp" srcset="img/utils/logo.webp 1x, img/utils/logo@2x.webp 2x">
-        
-            <img src="img/utils/logo.png" srcset="img/utils/logo@2x.png 2x" width="315" height="50" alt="Логотип">
-          </picture>
-          <ul class="list header__topper-links">
-            <li class="list__item header__topper-item">
-              <a class="list__link header__topper-link" href="#">Контакты</a>
-            </li>
-            <li class="list__item header__topper-item">
-              <a class="list__link header__topper-link" href="#">
-                <svg width="14" height="14" viewBox="0 0 14 14">
-                  <use xlink:href="img/svg/sprite.svg#icon-star"></use>
+          <div class="header__topper-wrapper">
+            <picture class="header__logo">
+              <source type="image/webp" srcset="img/utils/logo.webp 1x, img/utils/logo@2x.webp 2x">
+          
+              <img src="img/utils/logo.png" srcset="img/utils/logo@2x.png 2x" width="315" height="50" alt="Логотип">
+            </picture>
+            <ul class="list header__topper-links">
+              <li class="list__item header__topper-item">
+                <a class="list__link header__topper-link" href="#">
+                  <span>Контакты</span>
+                </a>
+              </li>
+              <li class="list__item header__topper-item">
+                <a class="list__link header__topper-link" href="#">
+                  <svg width="14" height="14" viewBox="0 0 14 14">
+                    <use xlink:href="img/svg/sprite.svg#icon-star"></use>
+                  </svg>
+                  <span>Отзывы</span>
+                </a>
+              </li>
+              <li class="list__item header__topper-item">
+                <a class="list__link header__topper-link" href="#">
+                  <span>Гарантия</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="list header__phone">
+              <li class="list__item header__phone-item green-dot">
+                Звоните, пн-вс 10:00 - 20:00
+              </li>
+              <li class="list__item header__phone-item">
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <use xlink:href="img/svg/sprite.svg#icon-phone"></use>
                 </svg>
-                Отзывы
-              </a>
-            </li>
-            <li class="list__item header__topper-item">
-              <a class="list__link header__topper-link" href="#">Гарантия</a>
-            </li>
-          </ul>
-          <ul class="list header__phone">
-            <li class="list__item header__phone-item green-dot">
-              Звоните, пн-вс 10:00 - 20:00
-            </li>
-            <li class="list__item header__phone-item">
-              <svg width="20" height="20" viewBox="0 0 20 20">
-                <use xlink:href="img/svg/sprite.svg#icon-phone"></use>
-              </svg>
-              <a class="list__link header__phone-link" href="tel:+73512207704">+7 351 220 77 04</a>
-            </li>
-          </ul>
+                <a class="list__link header__phone-link" href="tel:+73512207704">+7 351 220 77 04</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="header__lower">
@@ -63,7 +70,7 @@
               <div></div>
             </button>
             <a class="button header__mob-button" href="#">Связаться</a>
-          
+          </div>
           <nav class="header__navigation">
             <ul class="list header__lower-links">
               <li class="list__item header__lower-item">
@@ -71,7 +78,7 @@
                   <svg width="26" height="26" viewBox="0 0 26 26">
                     <use xlink:href="img/svg/sprite.svg#icon-catalog"></use>
                   </svg>
-                  Каталог
+                  <span>Каталог</span>
                 </a>
               </li>
               <li class="list__item header__lower-item">
@@ -79,7 +86,7 @@
                   <svg width="26" height="26" viewBox="0 0 26 26">
                     <use xlink:href="img/svg/sprite.svg#icon-apple"></use>
                   </svg>
-                  Ремонт Apple
+                  <span>Ремонт Apple</span>
                 </a>
               </li>
               <li class="list__item header__lower-item">
@@ -87,7 +94,7 @@
                   <svg width="26" height="26" viewBox="0 0 26 26">
                     <use xlink:href="img/svg/sprite.svg#icon-smartphone"></use>
                   </svg>
-                  Ремонт смартфонов
+                  <span>Ремонт смартфонов</span>
                 </a>
               </li>
               <li class="list__item header__lower-item">
@@ -95,7 +102,7 @@
                   <svg width="26" height="26" viewBox="0 0 26 26">
                     <use xlink:href="img/svg/sprite.svg#icon-tablet"></use>
                   </svg>
-                  Ремонт планшетов
+                  <span>Ремонт планшетов</span>
                 </a>
               </li>
               <li class="list__item header__lower-item">
@@ -103,14 +110,14 @@
                   <svg width="26" height="26" viewBox="0 0 26 26">
                     <use xlink:href="img/svg/sprite.svg#icon-note"></use>
                   </svg>
-                  Ремонт ноутбуков
+                  <span>Ремонт ноутбуков</span>
                 </a>
               </li>
             </ul>
           </nav>
         </div>
       </div>
-    </div></header>
+    </header>
     <main class="main">
       <section class="top">
         <div class="wrapper">
@@ -121,7 +128,9 @@
                 Ремонт планшетов в Челябинске. 
                 Бесплатно продиагностируем и быстро починим любую поломку. Гарантия 3 месяца
               </p>
-              <a class="button top__link" href="#">Записаться на диагностику</a>
+              <a class="button top__link" href="#">
+                <span>Записаться на диагностику</span>
+              </a>
               <ul class="list top__list">
                 <li class="list__item top__list-item">
                   <div class="top__list-icon">

@@ -1,0 +1,27 @@
+.green-dot {
+  position: relative;
+
+  &::after,
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    border-radius: 100%;
+    left: -15px;
+    top: 3px;
+  }
+
+  &::after {
+    width: 10px;
+    height: 10px;
+    background: rgba(86, 203, 100, 0.4);
+  }
+
+  &::before {
+    top: 5px;
+    left: -13px;
+    width: 6px;
+    height: 6px;
+    background: #56cb64;
+  }
+}
