@@ -16,6 +16,7 @@
   span {
     padding-left: 15px;
     position: relative;
+    z-index: 2;
 
     &::before {
       content: '';

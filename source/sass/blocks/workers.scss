@@ -22,6 +22,7 @@
     @include flex(stretch, space-between);
     
     padding-bottom: $gap * 40;
+    position: relative;
   }
 
   &__list-item {
@@ -29,8 +30,9 @@
 
     flex-direction: column;
     box-sizing: border-box;
-    padding: 0 14px;
+    padding: 0 6.5px;
     max-width: 356px;
+    min-width: 356px;
   }
 
   &__list-image {
@@ -89,5 +91,28 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 296px;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+      content: '';
+      position: absolute;
+      display: inline-block;
+      top: -6px;
+      left: 50%;
+      margin-left: -22px;
+      background-color: $lightGray;
+      border-radius: 4px;
+      transform: rotate(45deg);
+      z-index: -1;
+    }
+  }
+
+  .wrapper {
+    overflow-x: visible;
   }
 }

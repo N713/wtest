@@ -1,5 +1,6 @@
 .centers {
   padding-top: $gap * 60;
+  padding-bottom: $gap * 50;
 
   &__list {
     @include flex(flex-start, flex-start);
@@ -9,11 +10,11 @@
 
   &__list-item {
     width: 745px;
+    margin-bottom: 20px;
   }
 
   &__list-item:nth-of-type(2n-1) {
     margin-right: 20px;
-    margin-bottom: 20px;
   }
 
   &__list-header {
