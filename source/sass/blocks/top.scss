@@ -1,5 +1,6 @@
 .top {
   background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+  border-bottom: 1px solid $gray;
 
   &__wrapper {
     display: flex;
@@ -43,10 +44,10 @@
   }
 
   &__second-number {
-    margin-top: 630px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    transform: translate(-50%);
     z-index: 1;
   }
 
@@ -79,10 +80,9 @@
   }
 
   &__second {
-    background-image: url('../../img/devices/devices.png');
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: auto;
+    position: absolute;
+    top: 0;
+    right: -35px;
   }
 
   .wrapper {

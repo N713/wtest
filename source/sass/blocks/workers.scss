@@ -1,0 +1,93 @@
+.workers {
+  padding-top: $gap * 60;
+
+  &__header {
+    max-width: 1100px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    margin: 0 auto $gap * 20;
+  }
+
+  &__text {
+    text-align: center;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 31px;
+    margin-bottom: $gap * 40;
+  }
+
+  &__list {
+    @include flex(stretch, space-between);
+    
+    padding-bottom: $gap * 40;
+  }
+
+  &__list-item {
+    @include flex(center, flex-start);
+
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 14px;
+    max-width: 356px;
+  }
+
+  &__list-image {
+    margin-bottom: $gap * 20;
+
+    img {
+      display: block;
+      border-radius: 100%;
+    }
+  }
+
+  &__list-name {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: $gap * 8;
+  }
+
+  &__list-bio {
+    text-align: center;
+    min-height: 66px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: $gap * 16;
+  }
+
+  &__list-count {
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: $gap * 16;
+    padding-left: 34px;
+    width: 100%;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-image: url('../../img/utils/icon-check.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      top: -3px;
+      left: 0;
+    }
+  }
+
+  &__list-comment {
+    padding: 14px;
+    background-color: $lightGray;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

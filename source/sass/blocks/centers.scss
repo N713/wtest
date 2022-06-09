@@ -1,0 +1,44 @@
+.centers {
+  padding-top: $gap * 60;
+
+  &__list {
+    @include flex(flex-start, flex-start);
+
+    flex-wrap: wrap;
+  }
+
+  &__list-item {
+    width: 745px;
+  }
+
+  &__list-item:nth-of-type(2n-1) {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__list-header {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: $gap * 30;
+  }
+
+  &__list-text {
+    margin-bottom: $gap * 16;
+  }
+
+  &__list-text:last-of-type {
+    margin-bottom: $gap * 20;
+  }
+
+  &__list-button {
+    background-color: $white;
+    padding: 10px 40px;
+    border: 2px solid $black;
+    min-height: 60px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    border-radius: 60px;
+  }
+}

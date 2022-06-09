@@ -70,7 +70,7 @@
           <div class="header__mob">
             <button class="burger header__mob-burger" type="button">
               <span class="visually-hidden">Бургер</span>
-              <div></div>
+              <span></span>
             </button>
             <a class="button header__mob-button" href="#">Связаться</a>
           </div>
@@ -162,6 +162,14 @@
               </ul>
             </div>
             <div class="top__second">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/devices/devices.webp 1x, img/devices/devices@2x.webp 2x">
+            
+                <img src="img/devices/devices.png"
+                      srcset="img/devices/devices@2x.png 2x"
+                      width="auto" height="auto" alt="Устройства">
+              </picture>
               <div class="number top__second-number">
                 <p class="number__gradient">12&nbsp;585</p>
                 <picture class="number__smile">
@@ -316,58 +324,58 @@
         </div>
       </section>
     </main>
+    <div class="menu">
+      <div class="menu__top">
+        <h2 class="menu__header">Меню</h2>
+        <button type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </div>
+      <ul class="list menu__list">
+        <li class="list__item menu__list-item">
+          <a href="#" class="list__link menu__list-link">
+            <svg width="20" height="20" viewBox="0 0 20 20">
+              <use xlink:href="img/svg/sprite.svg#icon-apple"></use>
+            </svg>
+            Ремонт Apple
+          </a>
+        </li>
+        <li class="list__item menu__list-item">
+          <a href="#" class="list__link menu__list-link">
+            <svg width="20" height="20" viewBox="0 0 20 20">
+              <use xlink:href="img/svg/sprite.svg#icon-smartphone"></use>
+            </svg>
+            Ремонт смартфонов
+          </a>
+        </li>
+        <li class="list__item menu__list-item">
+          <a href="#" class="list__link menu__list-link">
+            <svg width="20" height="20" viewBox="0 0 20 20">
+              <use xlink:href="img/svg/sprite.svg#icon-tablet"></use>
+            </svg>
+            Ремонт планшетов
+          </a>
+        </li>
+        <li class="list__item menu__list-item">
+          <a href="#" class="list__link menu__list-link">
+            <svg width="20" height="20" viewBox="0 0 20 20">
+              <use xlink:href="img/svg/sprite.svg#icon-note"></use>
+            </svg>
+            Ремонт ноутбуков
+          </a>
+        </li>
+        <li class="list__item menu__list-item">
+          <a href="#" class="list__link menu__list-link">
+            <svg width="20" height="20" viewBox="0 0 20 20">
+              <use xlink:href="img/svg/sprite.svg#icon-gamepad"></use>
+            </svg>
+            Ремонт игровых приставок
+          </a>
+        </li>
+      </ul>
+    </div>
     <footer class="footer"></footer>           
     <script src="js/vendor.js"></script>
     <script src="js/script.js"></script>
   </body>
-  <div class="menu">
-    <div class="menu__top">
-      <h2 class="menu__header">Меню</h2>
-      <button type="button">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
-    </div>
-    <ul class="list menu__list">
-      <li class="list__item menu__list-item">
-        <a href="#" class="list__link menu__list-link">
-          <svg width="20" height="20" viewBox="0 0 20 20">
-            <use xlink:href="img/svg/sprite.svg#icon-apple"></use>
-          </svg>
-          Ремонт Apple
-        </a>
-      </li>
-      <li class="list__item menu__list-item">
-        <a href="#" class="list__link menu__list-link">
-          <svg width="20" height="20" viewBox="0 0 20 20">
-            <use xlink:href="img/svg/sprite.svg#icon-smartphone"></use>
-          </svg>
-          Ремонт смартфонов
-        </a>
-      </li>
-      <li class="list__item menu__list-item">
-        <a href="#" class="list__link menu__list-link">
-          <svg width="20" height="20" viewBox="0 0 20 20">
-            <use xlink:href="img/svg/sprite.svg#icon-tablet"></use>
-          </svg>
-          Ремонт планшетов
-        </a>
-      </li>
-      <li class="list__item menu__list-item">
-        <a href="#" class="list__link menu__list-link">
-          <svg width="20" height="20" viewBox="0 0 20 20">
-            <use xlink:href="img/svg/sprite.svg#icon-note"></use>
-          </svg>
-          Ремонт ноутбуков
-        </a>
-      </li>
-      <li class="list__item menu__list-item">
-        <a href="#" class="list__link menu__list-link">
-          <svg width="20" height="20" viewBox="0 0 20 20">
-            <use xlink:href="img/svg/sprite.svg#icon-gamepad"></use>
-          </svg>
-          Ремонт игровых приставок
-        </a>
-      </li>
-    </ul>
-  </div>
 </html>
