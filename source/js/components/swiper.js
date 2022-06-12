@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 
-const GAP = 32;
+let GAP = 30;
 let numberOfSlides = 4;
 
 const setSwiper = () => {

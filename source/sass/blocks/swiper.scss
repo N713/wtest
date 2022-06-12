@@ -9,7 +9,7 @@
 
   cursor: pointer;
   position: absolute;
-  top: 52%;
+  top: 53%;
   width: 70px;
   height: 70px;
   background: #FFFFFF;
@@ -25,10 +25,16 @@
     border: 3px solid $black;
     transform: rotate(45deg);
   }
+
+  &:hover,
+  &:focus {
+    background-color: $yellow;
+    transition: all 0.4s;
+  }
 }
 
 .swiper-button-prev {
-  left: -1%;
+  left: -14px;
 
   &::before {
     border-top: none;
@@ -37,7 +43,7 @@
 }
 
 .swiper-button-next {
-  right: -1%;
+  right: -14px;
 
   &::before {
     border-bottom: none;

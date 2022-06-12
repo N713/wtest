@@ -14,7 +14,7 @@
 
   &__topper {
     border-bottom: 1px solid $gray;
-    padding: 20px 0;
+    padding: 18.5px 0;
   }
 
   &__topper-wrapper,
@@ -23,7 +23,9 @@
   }
 
   &__logo {
-    margin-right: 44px;
+    margin-right: 40px;
+    position: relative;
+    top: 5px;
   }
 
   &__topper-item {
@@ -44,6 +46,15 @@
     svg, img {
       margin-right: 9px;
     }
+
+    &:hover,
+    &:focus {
+      span {
+        border-bottom: 1px solid $yellow;
+        transition: all 0.4s;
+      }
+    }
+
   }
 
   &__phone {
@@ -59,7 +70,7 @@
     display: inline-block;
 
     svg, img {
-      margin-right: 5px;
+      margin-right: 2px;
     }
   }
 
@@ -71,10 +82,16 @@
     font-weight: 700;
     font-size: 26px;
     line-height: 32px;
+
+    &:hover,
+    &:focus {
+      color: $yellow;
+      transition: all 0.4s;
+    }
   }
 
   &__lower {
-    padding: 10px 0;
+    padding: 16px 0;
   }
 
   &__mob {
@@ -88,7 +105,7 @@
   &__lower-link {
     @include flex(center, center);
 
-    padding: 8px 56px;
+    padding: 2px 56px;
     font-size: 16px;
     line-height: 20px;
     border-right: 1px solid $gray;
@@ -117,7 +134,8 @@
         height: 8px;
         background: rgb(255,204,0);
         background: linear-gradient(90deg, rgba(255,204,0,1) 100%, rgba(255,163,0,1) 100%);
-        top: 35%;
+        top: 20%;
+        right: 11px;
       }
 
       &::before {
@@ -125,9 +143,15 @@
         height: 6px;
         background-color: $white;
         z-index: 1;
-        right: 1px;
-        top: 32%;
+        right: 12px;
+        top: 10%;
       }
+    }
+
+    &:hover,
+    &:focus {
+      transition: all 0.4s;
+      color: $yellow;
     }
   }
 
@@ -142,5 +166,6 @@
 
   &__lower-item:first-of-type &__lower-link {
     padding-left: 0;
+    padding-right: 31px;
   }
 }

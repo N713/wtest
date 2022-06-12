@@ -17,7 +17,7 @@
 
   &__first {
     padding-top: $gap * 60;
-    padding-bottom: $gap * 44;
+    padding-bottom: $gap * 54;
     width: 100%;
     max-width: 820px;
     margin-right: 96px;
@@ -36,13 +36,14 @@
     font-weight: 500;
     font-size: 26px;
     line-height: 120%;
-    margin-bottom: $gap * 30;
+    margin-bottom: $gap * 29;
+    max-width: 675px;
   }
 
   &__link {
-    margin-bottom: $gap * 30;
+    margin-bottom: $gap * 20;
     position: relative;
-    z-index: 2;
+    z-index: 20;
 
     i {
       position: absolute;
@@ -53,22 +54,30 @@
       width: 36px;
       height: 36px;
       top: -6px;
-      left: 18%;
+      left: 19.5%;
       transform: rotate(45deg);
-      z-index: 0;
+      z-index: -1;
+    }
+  }
+
+  &__link:hover,
+  &__link:focus {
+    i {
+      border-top: 13px solid #FFC201;
+      border-left: 13px solid #FFC201;
     }
   }
 
   &__second-number {
     position: absolute;
-    left: 50%;
-    bottom: 100px;
+    left: 50.5%;
+    bottom: 108px;
     transform: translate(-50%);
     z-index: 1;
   }
 
   &__list {
-    @include flex(center, space-between);
+    @include flex(center, flex-start);
 
     flex-wrap: wrap;
   }
@@ -88,6 +97,10 @@
     @include flex(center, center);
   }
 
+  &__list-item:nth-of-type(2n-1) {
+    margin-right: $gap * 14;
+  }
+
   &__list-icon {
     width: 70px;
     height: 70px;
@@ -99,12 +112,23 @@
 
   &__list-text {
     max-width: 305px;
+
+    a {
+      position: relative;
+      top: -4px;
+
+      &:hover,
+      &:focus {
+        transition: all 0.4s;
+        border-bottom: 1px solid $yellow;
+      }
+    }
   }
 
   &__second {
     position: absolute;
-    top: 0;
-    right: -35px;
+    top: -2px;
+    right: -30px
   }
 
   .wrapper {

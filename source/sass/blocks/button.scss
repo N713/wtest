@@ -14,7 +14,7 @@
   @include flex(center, center);
 
   span {
-    padding-left: 15px;
+    padding-left: 20px;
     position: relative;
     z-index: 2;
 
@@ -27,8 +27,23 @@
       border-top: 3px solid $white;
       border-right: 3px solid $white;
       transform: rotate(45deg);
-      left: -15px;
+      left: -8px;
       top: 3px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $black;
+    transition: all 0.4s;
+    background: linear-gradient(270deg, #FFA300 0%, #FFCC00 100%);
+
+    span {
+      &::before {
+        transition: all 0.4s;
+        border-top: 3px solid $black;
+        border-right: 3px solid $black;
+      }
     }
   }
 }

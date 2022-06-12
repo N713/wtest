@@ -65,8 +65,8 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    margin-bottom: $gap * 16;
-    padding-left: 34px;
+    margin-bottom: $gap * 21.5;
+    padding-left: 41px;
     width: 100%;
 
     &::before {
@@ -80,12 +80,12 @@
       background-position: center;
       background-size: contain;
       top: -3px;
-      left: 0;
+      left: 6px;
     }
   }
 
   &__list-comment {
-    padding: 14px;
+    padding: 16px;
     background-color: $lightGray;
     border-radius: 20px;
     font-weight: 500;
