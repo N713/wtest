@@ -8,3 +8,9 @@
   margin: 0 auto;
   position: relative;
 }
+
+@media(max-width: $desktopA) {
+  .wrapper {
+    padding: 0 143px;
+  }   
+}

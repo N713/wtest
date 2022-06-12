@@ -8,6 +8,7 @@
     margin: 0 auto;
     position: relative;
     min-width: 1760px;
+    overflow: hidden;
   }
 
   &__first,
@@ -71,7 +72,7 @@
   &__second-number {
     position: absolute;
     left: 50.5%;
-    bottom: 108px;
+    bottom: 168px;
     transform: translate(-50%);
     z-index: 1;
   }
@@ -101,6 +102,12 @@
     margin-right: $gap * 14;
   }
 
+  &__list-item:last-of-type {
+    br {
+      display: none;
+    }
+  }
+
   &__list-icon {
     width: 70px;
     height: 70px;
@@ -127,11 +134,84 @@
 
   &__second {
     position: absolute;
-    top: -2px;
-    right: -30px
+    top: -134px;
+    right: -30px;
+  }
+
+  &__back {
+    img {
+      width: 976px;
+      height: auto;
+    }
   }
 
   .wrapper {
     overflow-x: visible;
+  }
+}
+
+@media(max-width: $desktopA) {
+  .top {
+    &__first {
+      max-width: 680px;
+      padding-top: $gap * 41;
+      padding-bottom: $gap * 40;
+    }
+
+    &__header {
+      font-weight: 800;
+      font-size: 70px;
+      line-height: 70px;
+    }
+
+    &__paragraph {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: $gap * 30;
+    }
+
+    &__second {
+      top: -134px;
+      right: 182px;
+    }
+
+    &__second-number {
+      left: 29%;
+      bottom: 204px;
+    }
+
+    &__back {
+      img {
+        width: 796px;
+        height: 950px;
+      }
+    }
+
+    &__link {
+      i {
+        left: 23.6%;
+      }
+    }
+
+    &__list-text {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 25px;
+      max-width: 242px;
+    }
+
+    &__list-item {
+      margin-bottom: $gap * 20;
+    }
+
+    &__list-item:nth-of-type(2n-1) {
+      margin-right: $gap * 8;
+    }
+
+    &__list-item:last-of-type {
+      br {
+        display: inline-block;
+      }
+    }
   }
 }

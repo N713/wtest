@@ -53,3 +53,45 @@
     }
   }
 }
+
+@media(max-width: $desktopA) {
+  .centers {
+    padding-top: $gap * 61;
+
+    &__list-item,
+    &__list-image img {
+      width: 525px;
+    }
+
+    &__list-image img {
+      height: 487px;
+    }
+
+    &__list-item:first-of-type img {
+      height: 537px;
+    }
+
+    &__list-header {
+      font-weight: 800;
+      font-size: 50px;
+      line-height: 50px;
+      padding-top: 4px;
+    }
+
+    &__list-text {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    &__list-text:last-of-type {
+      margin-bottom: $gap * 19;
+    }
+
+    &__list-button {
+      min-height: auto;
+      padding: 14px 44px;
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+}

@@ -54,11 +54,6 @@
 .swiper-slide {
   transition: all 0.4s;
 }
-/*
-.swiper-slide-prev {
-  opacity: 0;
-}
-*/
 
 .swiper-slide-active,
 .swiper-slide-next {
@@ -92,4 +87,19 @@
 
 .swiper-button-disabled {
   pointer-events: none;
+}
+
+@media(max-width: $desktopA) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 52.5%;
+  }
+
+  .swiper-button-prev {
+    left: 110px;
+  }
+  
+  .swiper-button-next {
+    right: 110px;
+  }
 }

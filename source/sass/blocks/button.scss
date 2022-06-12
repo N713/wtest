@@ -47,3 +47,13 @@
     }
   }
 }
+
+@media(max-width: $desktopA) {
+  .button {
+    max-width: 342px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    min-height: auto;
+  }
+}

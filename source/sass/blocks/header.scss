@@ -20,6 +20,7 @@
   &__topper-wrapper,
   &__topper-links {
     @include flex(center, flex-start);
+    overflow: hidden;
   }
 
   &__logo {
@@ -167,5 +168,63 @@
   &__lower-item:first-of-type &__lower-link {
     padding-left: 0;
     padding-right: 31px;
+  }
+}
+
+@media(max-width: $desktopA) {
+  .header {
+    &__logo {
+      top: 4px;
+    }
+
+    &__topper {
+      padding: 16px 0;
+    }
+
+    &__lower {
+      padding: 16px 0; 
+    }
+
+    &__lower-links {
+      justify-content: flex-start;
+    }
+
+    &__lower-link {
+      font-size: 14px;
+      line-height: 17px;
+      border-right: none;
+      padding: 0;
+
+      span {
+        padding-right: 20px;
+
+        &::after {
+          right: 4px;
+        }
+
+        &::before {
+          right: 5px;
+        }
+      }
+    }
+
+    &__lower-item {
+      margin-right: 49px;
+    }
+
+    &__lower-item:last-of-type {
+      margin-right: 0;
+    }
+
+    &__lower-item:first-of-type &__lower-link {
+      border-right: 1px solid $gray;
+      padding-right: 29px;
+      font-size: 16px;
+      line-height: 20px;
+
+      span {
+        padding-right: 0;
+      }
+    }
   }
 }

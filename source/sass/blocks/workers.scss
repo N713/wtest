@@ -35,6 +35,12 @@
     min-width: 356px;
   }
 
+  &__list-item:first-of-type &__list-comment {
+    br {
+      display: none;
+    }
+  }
+
   &__list-image {
     margin-bottom: $gap * 20;
 
@@ -114,5 +120,65 @@
 
   .wrapper {
     overflow-x: visible;
+  }
+}
+
+@media(max-width: $desktopA) {
+  .workers {
+    padding-top: $gap * 140;
+
+    &__header {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 42px;
+      max-width: 900px;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &__list {
+      position: relative;
+      left: 15px;
+    }
+
+    &__list-item {
+      max-width: 311px;
+      min-width: 311px;
+      padding: 0;
+      margin-right: $gap * 29;
+    }
+
+    &__list-name {
+      font-size: 22px;
+      line-height: 29px;
+    }
+
+    &__list-bio {
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: $gap * 12.5;
+    }
+
+    &__list-count {
+      padding-left: 30px;
+
+      &::before {
+        left: 0;
+      }
+    }
+
+    &__list-comment {
+      padding: 16px;
+      max-width: 280px;
+    }
+
+    &__list-item:first-of-type &__list-comment {
+      br {
+        display: inline-block;
+      }
+    }
   }
 }
