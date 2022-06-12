@@ -14,3 +14,9 @@
     padding: 0 143px;
   }   
 }
+
+@media(max-width: $desktopB) {
+  .wrapper {
+    padding: 0 87px;
+  }
+}

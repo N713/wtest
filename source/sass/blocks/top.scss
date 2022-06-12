@@ -215,3 +215,87 @@
     }
   }
 }
+
+@media(max-width: $desktopB) {
+  .top {
+    &__header {
+      font-size: 50px;
+      line-height: 50px;
+      max-width: 335px;
+      margin-bottom: $gap * 20;
+    }
+
+    &__paragraph {
+      font-size: 16px;
+      line-height: 19px;
+      max-width: 470px;
+      margin-bottom: $gap * 20;
+    }
+
+    &__link {
+      margin-bottom: $gap * 16;
+
+      i {
+        left: 17.4%;
+      }
+    }
+
+    &__list-item {
+      margin-bottom: $gap * 14;
+    }
+
+    &__list-item:nth-of-type(2n-1) {
+      margin-right: $gap * 10;
+    }
+
+    &__list-item:nth-of-type(3) {
+      svg, img {
+        width: 22px;
+        height: 16px;
+      }
+    }
+
+    &__list-item:last-of-type  &__list-text {
+      position: relative;
+      top: 4px;
+    }
+
+    &__list-icon {
+      width: 50px;
+      height: 50px;
+      margin-right: 16px;
+
+      img {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    &__list-text {
+      font-size: 14px;
+      line-height: 20px;
+      max-width: 186px;
+    }
+
+    &__back {
+      img {
+        width: 631px;
+        height: 714px;
+      }
+    }
+
+    &__second {
+      top: -92px;
+      right: 333px;
+    }
+
+    &__second-number {
+      left: 20.8%;
+      bottom: 127px;
+    }
+
+    &__first {
+      padding-bottom: 57px;
+    }
+  }
+}

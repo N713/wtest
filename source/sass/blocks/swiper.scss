@@ -90,6 +90,12 @@
 }
 
 @media(max-width: $desktopA) {
+  .swiper {
+    max-width: 1120px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
   .swiper-button-next,
   .swiper-button-prev {
     top: 52.5%;
@@ -103,3 +109,20 @@
     right: 110px;
   }
 }
+
+@media(max-width: $desktopB) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 52%;
+    width: 56px;
+    height: 56px;
+  }
+
+  .swiper-button-prev {
+    left: 60px;
+  }
+  
+  .swiper-button-next {
+    right: 60px;
+  }
+} 

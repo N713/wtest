@@ -25,6 +25,12 @@ const setSwiper = () => {
         spaceBetween: 20
       },
 
+      1024: {
+        slidesPerView: 'auto',
+        slidesPerGroup: numberOfSlides - 2,
+        spaceBetween: GAP + 20
+      },
+
       1366: {
         slidesPerView: 'auto',
         slidesPerGroup: numberOfSlides - 1,

@@ -181,6 +181,10 @@
       padding: 16px 0;
     }
 
+    &__topper-links {
+      display: none;
+    }
+
     &__lower {
       padding: 16px 0; 
     }
@@ -225,6 +229,47 @@
       span {
         padding-right: 0;
       }
+    }
+  }
+}
+
+@media(max-width: $desktopB) {
+  .header {
+    &__topper {
+      padding: 11px 0;
+    }
+
+    &__phone-item {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    &__phone-item:last-of-type {
+      svg, img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &__phone-link {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &__lower {
+      padding: 17px 0;
+    }
+
+    &__lower-item {
+      margin-right: 50px;
+    }
+
+    &__lower-item:last-of-type {
+      display: none;
+    }
+
+    &__lower-item:nth-of-type(4) {
+      margin-right: 0;
     }
   }
 }

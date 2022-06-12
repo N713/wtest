@@ -182,3 +182,65 @@
     }
   }
 }
+
+@media(max-width: $desktopB) {
+  .workers {
+    padding-top: $gap * 99;
+
+    &__header {
+      font-size: 36px;
+      line-height: 36px;
+      max-width: 820px;
+      margin-bottom: $gap * 16;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: $gap * 30;
+    }
+
+    &__list {
+      left: 10px;
+      padding-bottom: 65px;
+    }
+
+    &__list-item {
+      max-width: 243px;
+      min-width: 243px;
+    }
+
+    &__list-name {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    &__list-bio {
+      font-size: 14px;
+      line-height: 17px;
+      max-width: 163px;
+      min-height: 85px;
+    }
+
+    &__list-count {
+      font-size: 14px;
+      line-height: 17px;
+      padding-left: 58px;
+      margin-bottom: $gap * 16;
+
+      &::before {
+        width: 16px;
+        height: 16px;
+        top: -1px;
+        left: 32px;
+      }
+    }
+
+    &__list-comment {
+      font-size: 14px;
+      line-height: 17px;
+      padding: 12px 16px;
+      max-width: 100%;
+    }
+  }
+}

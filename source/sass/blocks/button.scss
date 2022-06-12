@@ -57,3 +57,22 @@
     min-height: auto;
   }
 }
+
+@media(max-width: $desktopB) {
+  .button {
+    font-size: 14px;
+    line-height: 17px;
+    padding: 16px;
+    max-width: 290px;
+
+    span {
+      &::before {
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        left: -3px;
+      }
+    }
+  }
+}
