@@ -185,7 +185,7 @@
 
 @media(max-width: $desktopB) {
   .workers {
-    padding-top: $gap * 99;
+    padding-top: $gap * 100;
 
     &__header {
       font-size: 36px;
@@ -241,6 +241,48 @@
       line-height: 17px;
       padding: 12px 16px;
       max-width: 100%;
+    }
+  }
+}
+
+@media(max-width: $tabletA) {
+  .workers {
+    padding-top: $gap * 60;
+
+    &__list {
+      left: 0;
+      padding-bottom: $gap * 30;
+    }
+
+    &__list-item {
+      max-width: 197px;
+      min-width: 197px;
+      margin-right: 30px;
+    }
+
+    &__list-image {
+      margin-bottom: 32px;
+
+      img {
+        width: 165px;
+        height: 165px;
+      }
+    }
+
+    &__list-count {
+      padding-left: 36px;
+      margin-bottom: $gap * 14;
+
+      &::before {
+        top: -2px;
+        left: 10px;
+      }
+    }
+
+    &__list-comment {
+      font-size: 12px;
+      line-height: 14px;
+      padding: 14px 10px;
     }
   }
 }

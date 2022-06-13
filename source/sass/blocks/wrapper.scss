@@ -20,3 +20,9 @@
     padding: 0 87px;
   }
 }
+
+@media(max-width: $tabletA) {
+  .wrapper {
+    padding: 0 59px;
+  }
+}

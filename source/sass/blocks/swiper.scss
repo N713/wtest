@@ -125,4 +125,19 @@
   .swiper-button-next {
     right: 60px;
   }
-} 
+}
+
+@media(max-width: $tabletA) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 50.4%;
+  }
+
+  .swiper-button-prev {
+    left: 32px;
+  }
+  
+  .swiper-button-next {
+    right: 32px;
+  }
+}

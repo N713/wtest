@@ -21,8 +21,15 @@ const setSwiper = () => {
 
     breakpoints: {
       320: {
-        slidesPerView: 2,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
         spaceBetween: 20
+      },
+
+      768: {
+        slidesPerView: 'auto',
+        slidesPerGroup: numberOfSlides - 2,
+        spaceBetween: GAP,
       },
 
       1024: {

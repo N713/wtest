@@ -169,3 +169,31 @@
     }
   }
 }
+
+@media(max-width: $tabletA) {
+  .centers {
+    &__list-item:nth-of-type(1),
+    &__list-item:nth-of-type(4) {
+      width: 197px;
+
+      img {
+        width: 197px;
+        height: 141px;
+      }
+    }
+
+    &__list-item:nth-of-type(3) {
+      width: 196px;
+
+      img {
+        width: 196px;
+        height: 141px;
+      }
+    }
+
+    &__list-item, 
+    &__list-item:nth-of-type(2n-1) {
+      margin-right: 30px;
+    }
+  }
+}
