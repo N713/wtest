@@ -122,6 +122,30 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var dom7
 
 /***/ }),
 
+/***/ "./source/js/components/menu.js":
+/*!**************************************!*\
+  !*** ./source/js/components/menu.js ***!
+  \**************************************/
+/*! exports provided: setMenu */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"setMenu\", function() { return setMenu; });\nvar menu = document.body.querySelector('.menu');\nvar burger = document.body.querySelector('.burger');\n\nvar setMenu = function setMenu() {\n  burger.addEventListener('click', function () {\n    menu.classList.remove('hidden');\n    menu.querySelector('.menu__close').addEventListener('click', function () {\n      menu.classList.add('hidden');\n    });\n  });\n  var first = document.body.querySelector('.footer p:nth-of-type(1)');\n  var second = document.body.querySelector('.footer p:nth-of-type(2)');\n  var third = document.body.querySelector('.footer p:nth-of-type(3)');\n  var position = second.offsetHeight - first.offsetHeight;\n  third.style.top = \"-\".concat(position, \"px\");\n  window.addEventListener('resize', function () {\n    position = second.offsetHeight - first.offsetHeight;\n    third.style.top = \"-\".concat(position, \"px\");\n  });\n};\n\n\n\n//# sourceURL=webpack:///./source/js/components/menu.js?");
+
+/***/ }),
+
+/***/ "./source/js/components/position.js":
+/*!******************************************!*\
+  !*** ./source/js/components/position.js ***!
+  \******************************************/
+/*! exports provided: setPosition */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"setPosition\", function() { return setPosition; });\nvar POINT = 1024;\nvar first = document.body.querySelector('.footer p:nth-of-type(1)');\nvar second = document.body.querySelector('.footer p:nth-of-type(2)');\nvar third = document.body.querySelector('.footer p:nth-of-type(3)');\n\nvar setPosition = function setPosition() {\n  var position = second.offsetHeight - first.offsetHeight;\n  third.style.top = \"-\".concat(position, \"px\");\n\n  var setCoordinate = function setCoordinate() {\n    position = second.offsetHeight - first.offsetHeight;\n    third.style.top = \"-\".concat(position, \"px\");\n\n    if (window.matchMedia(\"(max-width: \".concat(POINT + 1, \"px)\")).matches) {\n      window.removeEventListener('resize', setPosition);\n      third.style.top = '0px';\n    }\n  };\n\n  window.addEventListener('resize', setCoordinate);\n};\n\n\n\n//# sourceURL=webpack:///./source/js/components/position.js?");
+
+/***/ }),
+
 /***/ "./source/js/components/swiper.js":
 /*!****************************************!*\
   !*** ./source/js/components/swiper.js ***!
@@ -130,7 +154,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var dom7
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"setSwiper\", function() { return setSwiper; });\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/js/swiper.esm.bundle.js\");\n\nvar GAP = 30;\nvar numberOfSlides = 4;\n\nvar setSwiper = function setSwiper() {\n  var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('.swiper', {\n    slidesPerView: numberOfSlides - 3,\n    slidesPerGroup: numberOfSlides - 3,\n    spaceBetween: GAP - 20,\n    pagination: {\n      el: '.swiper-pagination',\n      clickable: 'true'\n    },\n    navigation: {\n      nextEl: '.swiper-button-next',\n      prevEl: '.swiper-button-prev'\n    },\n    breakpoints: {\n      320: {\n        slidesPerView: 1,\n        slidesPerGroup: 1,\n        spaceBetween: 20\n      },\n      768: {\n        slidesPerView: 'auto',\n        slidesPerGroup: numberOfSlides - 2,\n        spaceBetween: GAP\n      },\n      1024: {\n        slidesPerView: 'auto',\n        slidesPerGroup: numberOfSlides - 2,\n        spaceBetween: GAP + 20\n      },\n      1366: {\n        slidesPerView: 'auto',\n        slidesPerGroup: numberOfSlides - 1,\n        spaceBetween: GAP + 28\n      },\n      1920: {\n        slidesPerView: numberOfSlides,\n        slidesPerGroup: numberOfSlides,\n        spaceBetween: GAP\n      }\n    }\n  });\n};\n\n\n\n//# sourceURL=webpack:///./source/js/components/swiper.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"setSwiper\", function() { return setSwiper; });\n/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ \"./node_modules/swiper/js/swiper.esm.bundle.js\");\n\n\nvar setSwiper = function setSwiper() {\n  var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('.swiper', {\n    pagination: {\n      el: '.swiper-pagination',\n      clickable: 'true'\n    },\n    navigation: {\n      nextEl: '.swiper-button-next',\n      prevEl: '.swiper-button-prev'\n    },\n    breakpoints: {\n      320: {\n        slidesPerView: 'auto',\n        slidesPerGroup: 1\n      },\n      768: {\n        slidesPerView: 'auto',\n        slidesPerGroup: 2\n      },\n      1024: {\n        slidesPerView: 'auto',\n        slidesPerGroup: 2\n      },\n      1366: {\n        slidesPerView: 'auto',\n        slidesPerGroup: 3\n      },\n      1920: {\n        slidesPerView: 4,\n        slidesPerGroup: 4\n      }\n    }\n  });\n};\n\n\n\n//# sourceURL=webpack:///./source/js/components/swiper.js?");
 
 /***/ }),
 
@@ -142,7 +166,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/swiper */ \"./source/js/components/swiper.js\");\n\nObject(_components_swiper__WEBPACK_IMPORTED_MODULE_0__[\"setSwiper\"])();\n\n//# sourceURL=webpack:///./source/js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/swiper */ \"./source/js/components/swiper.js\");\n/* harmony import */ var _components_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/menu */ \"./source/js/components/menu.js\");\n/* harmony import */ var _components_position__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/position */ \"./source/js/components/position.js\");\n\n\n\nObject(_components_swiper__WEBPACK_IMPORTED_MODULE_0__[\"setSwiper\"])();\nObject(_components_menu__WEBPACK_IMPORTED_MODULE_1__[\"setMenu\"])();\nObject(_components_position__WEBPACK_IMPORTED_MODULE_2__[\"setPosition\"])();\n\n//# sourceURL=webpack:///./source/js/script.js?");
 
 /***/ })
 

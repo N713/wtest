@@ -325,3 +325,57 @@
     }
   }
 }
+
+@media(max-width: $tabletB) {
+  .header {
+    &__logo {
+      margin-right: 0;
+
+      img {
+        width: 168px;
+        height: auto;
+      }
+    }
+
+    &__phone-item:first-of-type {
+      display: none;
+    }
+
+    &__phone-item:last-of-type {
+      svg {
+        display: none;
+      }
+    }
+    
+    &__phone-link {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__topper {
+      border-bottom: none;
+      padding: 2px 0;
+    }
+
+    &__lower {
+      padding: 6px 0 14px;
+    }
+
+    &__navigation {
+      display: none;
+    }
+
+    &__mob {
+      @include flex(center, space-between);
+
+      .button {
+        padding: 7px 16px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        box-shadow: none;
+      }
+    }
+  }
+}

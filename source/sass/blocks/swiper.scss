@@ -141,3 +141,24 @@
     right: 32px;
   }
 }
+
+@media(max-width: $tabletB) {
+  .swiper-pagination-bullet {
+    margin: 0 15px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 47px;
+    height: 47px;
+    top: 46.8%;
+  }
+
+  .swiper-button-prev {
+    left: 24px;
+  }
+  
+  .swiper-button-next {
+    right: 24px;
+  }
+}

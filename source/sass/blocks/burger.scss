@@ -1,0 +1,51 @@
+.burger {
+  @include flex(center, center);
+
+  width: 32px;
+  height: 19px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+
+  span:last-of-type {
+    width: 100%;
+    height: 3px;
+    background-color: $black;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: $black;
+    left: 0;
+  }
+
+  &::before {
+    top: 0;
+    width: 70%;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+
+    span:last-of-type,
+    &::before,
+    &::after {
+      background-color: $yellow;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      width: 100%;
+    }
+  }
+}

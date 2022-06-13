@@ -26,3 +26,9 @@
     padding: 0 59px;
   }
 }
+
+@media(max-width: $tabletB) {
+  .wrapper {
+    padding: 0 24px;
+  }
+}

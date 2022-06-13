@@ -1,0 +1,140 @@
+.menu {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  min-height: 668px;
+  height: 100%;
+  transition: all 0.4s;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 3px;
+    height: 320px;
+    background: linear-gradient(90deg, #FFA400 0%, #FFCC00 100%);
+    border-radius: 4px;
+    right: 0;
+    top: 0;
+  }
+
+  &__top {
+    @include flex(center, space-between);
+
+    margin-bottom: 8px;
+  }
+
+  &__header {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__close {
+    width: 24px;
+    height: 24px;
+    background-color: $lightGray;
+    border-radius: 100px;
+    border: none;
+    position: relative;
+
+    @include flex(center, center);
+
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 2px;
+      height: 10px;
+      background-color: $black;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    } 
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+    
+    &:hover,
+    &:focus {
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        transition: all 0.4s;
+        background-color: $yellow;
+      }
+    }
+  }
+
+  &__list-item {
+    border-bottom: 2px solid $lightGray;
+    padding: 24px 0;
+  }
+
+  &__list-link {
+    @include flex(center, flex-start);
+
+    font-size: 14px;
+    line-height: 17px;
+
+    svg, img {
+      margin-right: 10px;
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+
+      svg {
+        color: $yellow;
+        transition: all 0.2s;
+        fill: $yellow;
+
+        stroke {
+          fill: $yellow;
+        }
+      }
+    }
+
+    span {
+      position: relative;
+
+      &::after,
+      &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        right: -14px;
+        width: 8px;
+        height: 8px;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        background-color: $white;
+        width: 6px;
+        height: 6px;
+        right: -11px;
+        top: 6px;
+      }
+
+      &::before {
+        background-color: $yellow;
+        top: 5px;
+      }
+    }
+  }
+}
+
+.menu.hidden {
+  left: -100%;
+}
