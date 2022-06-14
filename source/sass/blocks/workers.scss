@@ -56,6 +56,8 @@
     font-size: 26px;
     line-height: 34px;
     margin-bottom: $gap * 8;
+    word-wrap: break-word;
+    word-break: break-all;
   }
 
   &__list-bio {
@@ -220,6 +222,7 @@
     &__list-name {
       font-size: 20px;
       line-height: 26px;
+      max-width: 100%;
     }
 
     &__list-bio {

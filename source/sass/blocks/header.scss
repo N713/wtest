@@ -23,6 +23,11 @@
     overflow: hidden;
   }
 
+  &__topper-links {
+    max-width: 50%;
+    flex-wrap: wrap;
+  }
+
   &__logo {
     margin-right: 40px;
     position: relative;

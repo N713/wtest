@@ -69,10 +69,10 @@
     }
   }
 
-  &__second-number {
+  &__number {
     position: absolute;
-    left: 50.5%;
-    bottom: 168px;
+    left: 77%;
+    bottom: 100px;
     transform: translate(-50%);
     z-index: 1;
   }
@@ -175,9 +175,9 @@
       right: 182px;
     }
 
-    &__second-number {
-      left: 29%;
-      bottom: 204px;
+    &__number {
+      left: 54.1%;
+      bottom: 196px;
     }
 
     &__back {
@@ -289,13 +289,14 @@
       right: 333px;
     }
 
-    &__second-number {
-      left: 20.8%;
-      bottom: 127px;
+    &__number {
+      left: 41.5%;
+      bottom: 120px;
     }
 
     &__first {
       padding-bottom: 56px;
+      max-width: 550px;
     }
   }
 }
@@ -305,6 +306,8 @@
     &__header {
       font-size: 50px;
       line-height: 50px;
+      word-break: break-all;
+      word-wrap: break-word;
     }
 
     &__paragraph {
@@ -375,9 +378,9 @@
       right: 540px;
     }
 
-    &__second-number {
-      left: 16.6%;
-      bottom: 119px;
+    &__number {
+      left: 27.6%;
+      bottom: 112px
     }
   }
 }
@@ -386,10 +389,16 @@
   .top {
     border-bottom: none;
 
+    &__wrapper {
+      padding-bottom: 28px;
+      flex-direction: column;
+      overflow-x: visible;
+    }
+
     &__first {
       padding-top: $gap * 30;
+      padding-bottom: 0;
       max-width: 328px;
-      padding-bottom: $gap * 45;
     }
 
     &__header {
@@ -454,9 +463,13 @@
       right: 684px;
     }
 
-    &__second-number {
-      left: -32px;
-      bottom: -202%;
+    &__number {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      height: fit-content;
+      max-width: 327px;
+      transform: none;
     }
   }
 }
