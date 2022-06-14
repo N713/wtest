@@ -89,7 +89,12 @@
       position: absolute;
       width: 25px;
       height: 25px;
-      background-image: url('../../img/utils/icon-check.png');
+      background-image: url('../img/utils/icon-check.png');
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/utils/icon-check@2x.png");
+      }
+
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
